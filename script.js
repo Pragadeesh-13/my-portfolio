@@ -30,3 +30,30 @@ function type() {
   setTimeout(type, isDeleting ? 50 : 100); // speed
 }
 window.onload = type;
+
+function updateAOSAnimation() {
+  const ele = document.getElementById("left-col");
+  const ele2 = document.getElementById("right-col");
+  const ele3 = document.getElementById("bottom-col");
+
+  if (window.innerWidth <= 960) {
+    ele.setAttribute("data-aos", "fade-up");
+    ele2.setAttribute("data-aos", "fade-up");
+    ele3.setAttribute("data-aos", "fade-up");
+  } else {
+    ele.setAttribute("data-aos", "fade-right");
+    ele2.setAttribute("data-aos", "fade-left");
+    ele3.setAttribute("data-aos", "fade-up");
+  }
+
+  AOS.refresh(); // Tell AOS to recheck DOM
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateAOSAnimation();
+  AOS.init({ once: false });
+});
+
+window.addEventListener("resize", updateAOSAnimation);
+
+
