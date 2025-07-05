@@ -18,6 +18,9 @@ body {
   background-color: #11071f;
   color: white;
 }
+.type-writer-br{
+  display: none;
+}
 
 .navbar {
 
@@ -28,7 +31,9 @@ body {
   padding: 1.2rem 2rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
-
+.hamburg{
+  display: none;
+}
 .port-folio {
   text-decoration: none;
   color: white;
@@ -94,7 +99,9 @@ body {
 .main h1 {
   font-size: 3.125rem;
 }
-
+.clg-br{
+  display: none;
+}
 .main-body {
   display: flex;
   align-items: center;
@@ -469,7 +476,8 @@ body {
     width: 120px;
     height: auto;
   }
-  .langs-image img{
+
+  .langs-image img {
     width: 950px;
     height: auto;
   }
@@ -510,7 +518,8 @@ body {
   .responsive-br {
     display: none;
   }
-  .langs-image img{
+
+  .langs-image img {
     width: 850px;
     height: auto;
   }
@@ -535,18 +544,23 @@ body {
 }
 
 @media (max-width: 868px) {
-    .first-grid {
-    min-height: unset; /* Let content decide */
+  .first-grid {
+    min-height: unset;
+    /* Let content decide */
     padding-top: 2rem;
     padding-bottom: 4rem;
     gap: 8rem;
   }
-  .main-third,.langs{
-    min-height: unset; /* Let content decide */
+
+  .main-third,
+  .langs {
+    min-height: unset;
+    /* Let content decide */
     padding-top: 2rem;
     gap: 8rem;
   }
-  .socials{
+
+  .socials {
     padding-top: 8rem;
     min-height: unset;
     padding-bottom: 10rem;
@@ -561,18 +575,24 @@ body {
 
   .main-second p,
   .third-line p {
-    font-size: 0.81rem;
+    font-size: 0.9rem;
   }
 
+
+
   .main-third h2,
-  .langs h2,
+  
   .socials h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
+  .langs h2{
+    font-size: 1.2rem;
+  }
+
 
   .main-third p,
   .main-third .btn {
-    font-size: 0.62rem;
+    font-size: 0.9rem;
   }
 
   .first-line p,
@@ -591,33 +611,142 @@ body {
   .logo-m {
     width: 100px;
   }
-  .langs-image img{
+
+  .langs-image img {
     width: 750px;
     height: auto;
   }
+
+  .left-col,
+  .right-col,
+  .bottom-col {
+    padding-left: 0.3rem;
+    padding-right: 0.4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .wrapper-col {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .text{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+
 }
 
-
-/* @media (max-width: 706px) {
-  .first-grid h1, .main-third h1, .socials h1 {
-    font-size: 1.62rem;
+@media (max-width: 786px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
   }
-  .first-grid p {
-    font-size: 0.69rem;
+  .nav-list{
+    display: none;
   }
-  .main-third p, .main-third .btn {
-    font-size: 0.53rem;
+  .hamburg{
+    display: block;
+    width: 40px;
+    height: auto;
   }
-  .main-third h2, .langs h2, .socials h2 {
-    font-size: 0.85rem;
+  .navbar{
+    justify-content: space-between;
   }
-} */
-/* @media(max-width:425px){
 
-} */
-/* @media(max-width:375px){
+  .arrow {
+    display: none;
+    padding-top: 0;
+    padding-right: 0;
+  }
 
-} */
-/* @media(max-width:320px){
+  .main-body {
+    display: flex;
+    flex-direction: column;
+  }
 
-} */
+  .first-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .first-line p {
+    font-size: 1.3rem;
+  }
+  .main-second,.third-line{
+    text-align: center;
+  }
+  .third-line{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+  .responsive-br-two{
+    display: none;
+  }
+  .langs-image img{
+    width: 600px;
+  }
+  .test h2{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
+
+
+
+}
+@media (max-width:598px){
+  .langs-image img{
+    width: 400px;
+  }
+  .type-writer-br{
+    display: block;
+  }
+  .text{
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+  }
+}
+@media (max-width:494px) {
+  .main-second-text h1{
+    font-size: 1.5rem;
+  }
+  
+}
+@media (max-width:460px) {
+  .langs-br{
+    display: none;
+  }
+  
+}
+@media (max-width:408px) {
+  .langs-image img{
+    width: 350px;
+  }
+}
+@media (max-width:396px) {
+  
+}
+@media (max-width:382px) {
+  .main-second-text h1{
+    font-size: 1.3rem;
+  } 
+}
+@media (max-width:378px) {
+  .clg-br{
+    display: block;
+  }
+  .main-text h1{
+    font-size: 1.5rem;
+  }
+  .first-line p{
+    font-size: 1rem;
+  }
+
+}
