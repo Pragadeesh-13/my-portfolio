@@ -663,6 +663,19 @@ body {
     text-align: center;
     gap: 2rem;
   }
+  .hover-effect:active .btn {
+    background: linear-gradient(
+    135deg,
+    #130428 7%,
+    #251043 34%,
+    #38126d 57%,
+    #261045 85%,
+    #190634 100%
+  );
+    box-shadow: 0 0 1.5rem white;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
   .nav-list {
     display: none;
   }
