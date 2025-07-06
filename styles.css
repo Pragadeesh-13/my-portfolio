@@ -31,9 +31,7 @@ body {
   padding: 1.2rem 2rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
-.hamburg{
-  display: none;
-}
+
 .port-folio {
   text-decoration: none;
   color: white;
@@ -51,7 +49,22 @@ body {
   z-index: 1;
 
 }
+.ham-burg-btn{
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
 
+.mobile-nav{
+  list-style-type: none;
+  display: none;
+}
+.mobile-nav a{
+  text-decoration: none;
+  color: white;
+}
 
 
 .emoji-glow::before {
@@ -648,9 +661,14 @@ body {
   .nav-list{
     display: none;
   }
-  .hamburg{
+  .navbar{
+    background: none;
+  }
+  .ham-burg-btn{
     display: block;
-    width: 40px;
+  }
+  .hamburg{
+    width: 45px;
     height: auto;
   }
   .navbar{
@@ -723,6 +741,16 @@ body {
   .langs-br{
     display: none;
   }
+  .port-folio{
+    display: none;
+  }
+  .ham-burg-btn{
+    margin-left: auto;
+  
+  }
+  .navbar{
+    padding-right: 1rem;
+  }
   
 }
 @media (max-width:408px) {
@@ -730,9 +758,7 @@ body {
     width: 350px;
   }
 }
-@media (max-width:396px) {
-  
-}
+
 @media (max-width:382px) {
   .main-second-text h1{
     font-size: 1.3rem;
