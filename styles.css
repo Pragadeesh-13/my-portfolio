@@ -775,7 +775,7 @@ body {
   .main-second-text h1 {
     font-size: 1.5rem;
   }
-  .hover-effect::before {
+  .hover-effect:hover::before {
     display: none !important;
   }
 }
