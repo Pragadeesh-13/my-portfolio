@@ -4,7 +4,9 @@ const texts = [
   "Full-stack Developer",
 ];
 
-let count = 0, index = 0, isDeleting = false;
+let count = 0,
+  index = 0,
+  isDeleting = false;
 
 function type() {
   const element = document.getElementById("type-writer");
@@ -16,7 +18,7 @@ function type() {
     index++;
     if (index > text.length) {
       isDeleting = true;
-      setTimeout(type, 1000); // pause before deleting
+      setTimeout(type, 1000);
       return;
     }
   } else {
@@ -27,7 +29,7 @@ function type() {
     }
   }
 
-  setTimeout(type, isDeleting ? 50 : 100); // speed
+  setTimeout(type, isDeleting ? 50 : 100);
 }
 window.onload = type;
 
@@ -46,14 +48,47 @@ function updateAOSAnimation() {
     ele3.setAttribute("data-aos", "fade-up");
   }
 
-  AOS.refresh(); // Tell AOS to recheck DOM
+  AOS.refresh();
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   updateAOSAnimation();
   AOS.init({ once: false });
+  change_colour();
+  document
+    .querySelectorAll(".nav-links[href='#home']")
+    .forEach((link) => link.classList.add("nav-click"));
 });
 
 window.addEventListener("resize", updateAOSAnimation);
 
+const mob = document.getElementById("mobile");
+const ham = document.getElementById("ham-burg");
+const body = document.body;
+function show() {
+  mob.classList.toggle("display");
+}
+const ele = document.querySelectorAll(".nav-links");
+function change_colour() {
+  ele.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      ele.forEach((l) => l.classList.remove("nav-click"));
+      element.classList.add("nav-click");
+    });
+  });
+}
+document.addEventListener("click", (e) => {
+  const isHamburger = ham.contains(e.target);
+  const isMobileNav = mob.contains(e.target);
 
+  if (mob.classList.contains("display") && !isHamburger && !isMobileNav) {
+    mob.classList.toggle("display");
+  }
+});
+
+document.querySelectorAll(".mobile-nav .nav-links").forEach((link) => {
+  link.addEventListener("click", () => {
+    if (mob.classList.contains("display")) {
+      mob.classList.toggle("display");
+    }
+  });
+});
