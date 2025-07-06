@@ -97,10 +97,13 @@ function simulateMobileHoverAnimation() {
 
   cards.forEach((card) => {
     card.addEventListener("touchstart", () => {
+      // Remove from all cards first
       cards.forEach((c) => c.classList.remove("card-tap-animate"));
 
+      // Add animation class to current tapped card
       card.classList.add("card-tap-animate");
 
+      // Remove it after short duration (like hover fade-out)
       setTimeout(() => {
         card.classList.remove("card-tap-animate");
       }, 300);
@@ -108,4 +111,3 @@ function simulateMobileHoverAnimation() {
   });
 }
 
-simulateMobileHoverAnimation();

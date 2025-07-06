@@ -7,6 +7,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+.card-tap-animate .btn::before {
+  width: 100%;
+  border-radius: 2rem;
+}
 
 html {
   font-size: 16px;
@@ -663,17 +667,6 @@ body {
     text-align: center;
     gap: 2rem;
   }
-.card-tap-animate .btn::before {
-  width: 100%;
-  border-radius: 2rem;
-}
-
-.card-tap-animate .btn {
-  position: relative;
-  z-index: 1;
-  color: white;
-}
-
   .nav-list {
     display: none;
   }
