@@ -663,19 +663,17 @@ body {
     text-align: center;
     gap: 2rem;
   }
-  .hover-effect:active .btn {
-    background: linear-gradient(
-    135deg,
-    #130428 7%,
-    #251043 34%,
-    #38126d 57%,
-    #261045 85%,
-    #190634 100%
-  );
-    box-shadow: 0 0 1.5rem white;
-    color: white;
-    transition: all 0.3s ease-in-out;
-  }
+.card-tap-animate .btn::before {
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.card-tap-animate .btn {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
   .nav-list {
     display: none;
   }

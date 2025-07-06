@@ -92,3 +92,23 @@ document.querySelectorAll(".mobile-nav .nav-links").forEach((link) => {
     }
   });
 });
+function simulateMobileHoverAnimation() {
+  const cards = document.querySelectorAll(".hover-effect");
+
+  cards.forEach((card) => {
+    card.addEventListener("touchstart", () => {
+      // Remove from all other cards
+      cards.forEach((c) => c.classList.remove("card-tap-animate"));
+
+      // Add animation class
+      card.classList.add("card-tap-animate");
+
+      // Remove after animation duration (match your ::before transition: 0.2s)
+      setTimeout(() => {
+        card.classList.remove("card-tap-animate");
+      }, 300);
+    });
+  });
+}
+
+simulateMobileHoverAnimation();
