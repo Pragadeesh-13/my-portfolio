@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   PRAGADEESH KUMAR — PORTFOLIO
-   Three.js Scene: Premium Particle Network
-   ═══════════════════════════════════════════════════════════ */
 
 (function () {
   'use strict';
@@ -56,7 +52,7 @@
   camera.position.z = CONFIG.cameraZ;
 
   // ─── Particle Network Setup ───
-  
+
   // Data arrays
   const positions = new Float32Array(CONFIG.particleCount * 3);
   const velocities = [];
@@ -64,11 +60,11 @@
 
   // Spread them in a large volume
   const volumeSize = { x: 20, y: 30, z: 10 };
-  
+
   for (let i = 0; i < CONFIG.particleCount; i++) {
     // Distribute heavily around Y=0 to Y=-20 (covering the scroll area)
     const px = (Math.random() - 0.5) * volumeSize.x;
-    const py = (Math.random() - 0.5) * volumeSize.y - 5; 
+    const py = (Math.random() - 0.5) * volumeSize.y - 5;
     const pz = (Math.random() - 0.5) * volumeSize.z;
 
     positions[i * 3] = px;
@@ -88,7 +84,7 @@
   // 1. Points Geometry & Material
   const pGeometry = new THREE.BufferGeometry();
   pGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-  
+
   // Custom circular glowing point material
   const pMaterial = new THREE.ShaderMaterial({
     uniforms: {
@@ -187,7 +183,7 @@
     // ─── 3D Camera Parallax ───
     const scrollFactor = 0.005; // Slowed down from 0.015
     camera.position.y = -(state.smoothScroll * scrollFactor);
-    
+
     // Project mouse to world space at z=0 plane to repel particles
     mouseWorld.set(state.mouse.x, state.mouse.y, 0.5);
     mouseWorld.unproject(camera);
@@ -201,7 +197,7 @@
 
     for (let i = 0; i < CONFIG.particleCount; i++) {
       const idx = i * 3;
-      
+
       // Current pos
       let px = posAttr[idx];
       let py = posAttr[idx + 1];
@@ -217,10 +213,10 @@
         const dxMouse = mouseWorld.x - px;
         const dyMouse = mouseWorld.y - py;
         const dzMouse = mouseWorld.z - pz;
-        
+
         const distToMouseSq = dxMouse * dxMouse + dyMouse * dyMouse + dzMouse * dzMouse;
         const attractRadSq = 12.0; // Large reach radius
-        
+
         if (distToMouseSq < attractRadSq && distToMouseSq > 0.01) {
           const force = (attractRadSq - distToMouseSq) / attractRadSq;
           // Aggressive attraction towards mouse
@@ -237,10 +233,10 @@
       // Wrap around Y axis continuously centered on camera
       const camY = camera.position.y;
       const wrapHeight = 40; // Total height of the particle volume
-      if (py > camY + wrapHeight/2) {
+      if (py > camY + wrapHeight / 2) {
         py -= wrapHeight;
         basePositions[i].y -= wrapHeight;
-      } else if (py < camY - wrapHeight/2) {
+      } else if (py < camY - wrapHeight / 2) {
         py += wrapHeight;
         basePositions[i].y += wrapHeight;
       }
@@ -256,7 +252,7 @@
         if (lineIdx >= maxLines) break;
 
         const jdx = j * 3;
-        vecB.set(posAttr[jdx], posAttr[jdx+1], posAttr[jdx+2]);
+        vecB.set(posAttr[jdx], posAttr[jdx + 1], posAttr[jdx + 2]);
 
         const distSq = vecA.distanceToSquared(vecB);
         const maxDistSq = CONFIG.maxDistance * CONFIG.maxDistance;
@@ -270,14 +266,14 @@
           const aIdx = lineIdx * 2;
 
           linePositions[lIdx] = px;
-          linePositions[lIdx+1] = py;
-          linePositions[lIdx+2] = pz;
-          linePositions[lIdx+3] = vecB.x;
-          linePositions[lIdx+4] = vecB.y;
-          linePositions[lIdx+5] = vecB.z;
+          linePositions[lIdx + 1] = py;
+          linePositions[lIdx + 2] = pz;
+          linePositions[lIdx + 3] = vecB.x;
+          linePositions[lIdx + 4] = vecB.y;
+          linePositions[lIdx + 5] = vecB.z;
 
           lineAlphas[aIdx] = alpha;
-          lineAlphas[aIdx+1] = alpha;
+          lineAlphas[aIdx + 1] = alpha;
 
           lineIdx++;
         }
@@ -285,7 +281,7 @@
     }
 
     pGeometry.attributes.position.needsUpdate = true;
-    
+
     lGeometry.attributes.position.needsUpdate = true;
     lGeometry.attributes.aAlpha.needsUpdate = true;
     // Tell renderer exactly how many lines to draw to save performance
@@ -304,7 +300,7 @@
     // Raw normalized device coordinates
     state.mouse.rawX = (e.clientX / window.innerWidth) * 2 - 1;
     state.mouse.rawY = -(e.clientY / window.innerHeight) * 2 + 1;
-    
+
     // Lerped for smooth camera pan if we wanted it, but using raw for accurate repulsion mapping
     state.mouse.x = state.mouse.rawX;
     state.mouse.y = state.mouse.rawY;
@@ -313,7 +309,7 @@
   // Scroll
   function onScroll() {
     state.scroll = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     // Update nav background
     const nav = document.getElementById('nav');
     if (state.scroll > 60) {
@@ -330,7 +326,7 @@
   function onResize() {
     state.viewportHeight = window.innerHeight;
     state.docHeight = document.documentElement.scrollHeight;
-    
+
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -342,7 +338,7 @@
 
   // ─── DOM Parallax Logic ───
   const parallaxElements = document.querySelectorAll('[data-speed]');
-  
+
   function updateDOMParallax() {
     parallaxElements.forEach(el => {
       const speed = parseFloat(el.getAttribute('data-speed'));
@@ -350,7 +346,7 @@
       const elCenter = rect.top + rect.height / 2;
       const viewCenter = state.viewportHeight / 2;
       const dist = elCenter - viewCenter;
-      
+
       const yOffset = dist * (1 - speed) * 0.1;
       el.style.transform = `translate3d(0, ${yOffset}px, 0)`;
     });
@@ -368,7 +364,7 @@
         }
       });
     },
-    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    { threshold: 0.1, rootMargin: '0px 0px 0px 0px' }
   );
 
   revealElements.forEach((el) => revealObserver.observe(el));
