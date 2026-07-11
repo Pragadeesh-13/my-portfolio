@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pragadeesh Kumar — Software Engineer</title>
+  <meta name="description" content="Portfolio of Pragadeesh Kumar — Software Engineer specializing in full-stack development, agentic AI workflows, and systems design.">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- WebGL Canvas (Global 3D Environment) -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- Content -->
+  <div class="content-layer">
+
+    <!-- ─── Navigation ─── -->
+    <nav class="nav" id="nav">
+      <a href="#" class="nav-logo">pragadeesh<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#experience" data-nav>Experience</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#contact" data-nav>Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ─── Hero ─── -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting" data-speed="0.8">Software Engineer</p>
+        <h1 class="hero-name" data-speed="0.5">Pragadeesh Kumar</h1>
+        <p class="hero-tagline" data-speed="0.7">
+          Building thoughtful software at the intersection of systems engineering, 
+          AI workflows, and clean design. Currently pursuing an Integrated M.Tech 
+          in Software Engineering at VIT Chennai.
+        </p>
+        <div class="hero-links" data-speed="0.9">
+          <a href="mailto:tpragadeeshkumar@gmail.com" class="hero-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email
+          </a>
+          <a href="https://www.linkedin.com/in/pragadeesh-kumar-dev/" target="_blank" class="hero-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/pragadeesh-13" target="_blank" class="hero-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" data-speed="1.2">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ─── About / Education ─── -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="reveal" data-speed="0.8">
+          <p class="section-label">About</p>
+          <h2 class="section-title">Education & <span>Background</span></h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I'm a software engineering student driven by the craft of building 
+              systems that are <strong>reliable, well-architected, and genuinely useful</strong>. 
+              My work spans full-stack web development, agentic AI pipelines, and 
+              applied machine learning — always with an emphasis on clean design 
+              and thoughtful engineering decisions.
+            </p>
+            <br>
+            <p>
+              I approach every project as an opportunity to solve real problems — 
+              whether that's building a conference platform from scratch, simulating 
+              multi-agent policy debates, or predicting molecular permeability with 
+              quantum computing.
+            </p>
+          </div>
+          <div class="edu-card reveal glass-card">
+            <h3 class="edu-institution">Vellore Institute of Technology, Chennai</h3>
+            <p class="edu-degree">Integrated M.Tech in Software Engineering</p>
+            <div class="edu-meta">
+              <span class="edu-gpa">CGPA: 8.93 / 10</span>
+              <span>Expected Graduation: 2028</span>
+            </div>
+            <p class="coursework-label">Relevant Coursework</p>
+            <div class="coursework-tags reveal-children">
+              <span class="tag">Software Engineering</span>
+              <span class="tag">Requirements Engineering</span>
+              <span class="tag">Software Architecture</span>
+              <span class="tag">Design Patterns</span>
+              <span class="tag">Data Structures & Algorithms</span>
+              <span class="tag">Object-Oriented Programming</span>
+              <span class="tag">Database Management Systems</span>
+              <span class="tag">Operating Systems</span>
+              <span class="tag">Computer Networks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ─── Experience ─── -->
+    <section id="experience">
+      <div class="section-inner">
+        <div class="reveal" data-speed="0.8">
+          <p class="section-label">Experience</p>
+          <h2 class="section-title">Where I've <span>Worked</span></h2>
+        </div>
+
+        <div class="timeline">
+          <!-- ICGFG 2026 -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <p class="timeline-date">Dec 2025 — Feb 2026</p>
+              <h3 class="timeline-role">Website Architect & Lead Developer</h3>
+              <p class="timeline-org">
+                <a href="https://chennai.vit.ac.in/files/icgfg2026/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">International Conference on Green and Future Generations (ICGFG 2026)</a> · VIT Chennai
+              </p>
+              <ul class="timeline-details">
+                <li>Independently designed, developed, and deployed the official conference website for ICGFG 2026 hosted by VIT Chennai.</li>
+                <li>Engineered responsive and accessible web interfaces using HTML, CSS, and JavaScript.</li>
+                <li>Managed the complete software delivery lifecycle — requirements gathering, implementation, testing, deployment, and maintenance.</li>
+                <li>Deployed and maintained the platform on institutional infrastructure supporting organizers, researchers, and attendees.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Research Intern -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-panel">
+              <p class="timeline-date">Summer 2025</p>
+              <h3 class="timeline-role">Research Intern — Mental Health Chatbot</h3>
+              <p class="timeline-org">Vellore Institute of Technology, Chennai</p>
+              <ul class="timeline-details">
+                <li>Contributed to the development of an AI-powered conversational system for preliminary mental health disorder assessment.</li>
+                <li>Designed and evaluated LLM-driven dialogue workflows to improve response relevance, consistency, and user experience.</li>
+                <li>Assisted in testing, validation, and performance analysis of conversational AI pipelines across diverse interaction scenarios.</li>
+                <li>Collaborated with researchers to improve system reliability and support evidence-based mental health screening interactions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ─── Projects ─── -->
+    <section id="projects">
+      <div class="section-inner">
+        <div class="reveal" data-speed="0.8">
+          <p class="section-label">Projects</p>
+          <h2 class="section-title">Things I've <span>Built</span></h2>
+        </div>
+
+        <div class="projects-grid">
+          <!-- LLM Council -->
+          <div class="project-card reveal glass-card">
+            <div class="project-content">
+              <p class="project-number">01</p>
+              <h3 class="project-name">
+                <a href="https://github.com/Pragadeesh-13/Policy-Simulation" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">LLM Council ↗</a>
+              </h3>
+              <ul class="project-desc">
+                <li>Built a multi-agent policy simulation platform where AI representatives of Indian states debate user-provided policies.</li>
+                <li>Modeled state-specific priorities and generated verdicts, debate summaries, and state-level impact assessments.</li>
+                <li>Leveraged local inference through LM Studio and Qwen 8B to coordinate autonomous agent interactions.</li>
+              </ul>
+              <div class="project-stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">LM Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BBB Prediction -->
+          <div class="project-card reveal glass-card">
+            <div class="project-content">
+              <p class="project-number">02</p>
+              <h3 class="project-name">
+                <a href="https://github.com/Pragadeesh-13/Quantum" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Blood-Brain Barrier Permeability Prediction ↗</a>
+              </h3>
+              <ul class="project-desc">
+                <li>Developed a classical and quantum machine learning pipeline for BBB permeability prediction from molecular descriptors.</li>
+                <li>Applied feature engineering, L1 feature selection, PCA reduction, and evaluated multiple ML models.</li>
+                <li>Prototyped a quantum-kernel classifier using Qiskit and generated OpenQASM circuits for backend validation.</li>
+              </ul>
+              <div class="project-stack">
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">Scikit-Learn</span>
+                <span class="stack-tag">Qiskit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ─── Achievements ─── -->
+    <section id="achievements">
+      <div class="section-inner">
+        <div class="reveal" data-speed="0.8">
+          <p class="section-label">Achievements</p>
+          <h2 class="section-title">Recognition</h2>
+        </div>
+
+        <div class="achievement-card reveal glass-card">
+          <div class="achievement-content-wrapper project-content">
+            <div class="achievement-stat">
+              <div class="achievement-number" data-count="10">0</div>
+              <p class="achievement-number-label">Top 10 / 150 Teams</p>
+            </div>
+            <div class="achievement-details-box">
+              <h3 class="project-name">Codezilla Inter-College Hackathon</h3>
+              <ul class="achievement-details">
+                <li>Led Team X to a Top 10 finish among 150 participating teams.</li>
+                <li>Developed Smart Cattle Advisor using ResNet50, Gemini, and MCP workflows for cattle breed recognition and advisory.</li>
+                <li>Delivered multilingual livestock care, profitability, and breed-specific recommendations for farmers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ─── Skills ─── -->
+    <section id="skills">
+      <div class="section-inner">
+        <div class="reveal" data-speed="0.8">
+          <p class="section-label">Skills</p>
+          <h2 class="section-title">Technical <span>Toolkit</span></h2>
+        </div>
+
+        <div class="skills-grid reveal-children">
+          <div class="skill-group glass-panel">
+            <h3 class="skill-group-title">Languages</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">jQuery</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-panel">
+            <h3 class="skill-group-title">Frontend</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">React.js</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-panel">
+            <h3 class="skill-group-title">Agentic Engineering</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Claude Code</span>
+              <span class="skill-tag">Codex</span>
+              <span class="skill-tag">Cursor</span>
+              <span class="skill-tag">OpenCode</span>
+              <span class="skill-tag">MCP</span>
+              <span class="skill-tag">Agentic Workflows</span>
+            </div>
+          </div>
+
+          <div class="skill-group glass-panel">
+            <h3 class="skill-group-title">Developer Tools</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">LM Studio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Contact ─── -->
+    <section id="contact">
+      <div class="section-inner contact-section">
+        <div class="reveal">
+          <h2 class="contact-heading" data-speed="0.6">Let's connect.</h2>
+          <p class="contact-sub" data-speed="0.8">
+            Open to opportunities, collaborations, and conversations about 
+            software engineering, AI, and building things that matter.
+          </p>
+        </div>
+        <div class="contact-links reveal" data-speed="0.9">
+          <a href="mailto:tpragadeeshkumar@gmail.com" class="contact-link primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            tpragadeeshkumar@gmail.com
+          </a>
+          <a href="https://www.linkedin.com/in/pragadeesh-kumar-dev/" target="_blank" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/pragadeesh-13" target="_blank" class="contact-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            GitHub
+          </a>
+        </div>
+        <footer class="footer">
+
+        </footer>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Three.js & SimplexNoise -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
