@@ -1,7 +1,6 @@
 
 (function () {
   'use strict';
-
   // ─── Configuration ───
   const CONFIG = {
     particleCount: window.innerWidth < 768 ? 200 : 450,
