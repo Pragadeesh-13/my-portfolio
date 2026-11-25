@@ -29,5 +29,3 @@ Comparing classical and quantum machine learning for blood-brain barrier permeab
 [Source](https://github.com/Pragadeesh-13/Quantum)
 
 ---
-
-The site pairs warm ivory and coral with a blue-slate dark theme, readable typography, and looping project previews. Built with **HTML, CSS, and JavaScript**.
