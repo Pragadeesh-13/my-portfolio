@@ -49,9 +49,9 @@ h1 .serif { color: var(--accent); }
 .intro-bio { max-width: 470px; font-size: 16px; line-height: 1.8; color: var(--muted); margin-top: 18px; }
 .intro-bio strong { color: var(--ink); font-weight: 600; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; margin-top: 28px; }
-.button { display: inline-flex; align-items: center; gap: 35px; padding: 16px 22px; font-size: 14px; font-weight: 600; transition: background .2s, transform .2s; }
+.button { display: inline-flex; align-items: center; gap: 35px; padding: 16px 22px; font-size: 14px; font-weight: 600; transition: background .2s, color .2s; }
 .button-dark { background: var(--ink); color: var(--paper); }
-.button-dark:hover { background: #f5c518; color: #0b0b0a; transform: translateY(-2px); }
+.button-dark:hover { background: #f5c518; color: #0b0b0a; }
 .button span, .text-link span { font-size: 19px; }
 .text-link { font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 16px; }
 .system-art { max-width: 480px; width: 100%; justify-self: end; }
@@ -102,6 +102,10 @@ h2 { font-size: clamp(34px, 3.6vw, 50px); }
 .project-actions { display: flex; flex-wrap: wrap; gap: 0 24px; }
 .project-actions .project-link { flex: 1 1 130px; gap: 16px; }
 .icon-definitions { position: absolute; width: 0; height: 0; overflow: hidden; }
+.icon-arrow { width: 1em; height: 1em; display: inline-block; vertical-align: -0.14em; flex-shrink: 0; }
+.icon-asterisk { width: 0.78em; height: 0.78em; display: inline-block; vertical-align: middle; }
+.contact-arrow .icon-arrow { width: 0.72em; height: 0.72em; vertical-align: middle; }
+.preview-caption .icon-arrow, .social-links a .icon-arrow { margin-left: 4px; }
 .github-link, .project-actions .github-link { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 44px; width: 44px; min-height: 44px; }
 .github-link svg { width: 22px; height: 22px; }
 .github-link:hover { color: var(--accent); }
@@ -170,12 +174,14 @@ h2 { font-size: clamp(34px, 3.6vw, 50px); }
 .contact-arrow { width: 100px; height: 100px; display: grid; place-items: center; border: 1px solid #0b0b0a33; border-radius: 50%; flex-shrink: 0; font-size: 55px; transition: background .2s, color .2s; }
 .contact-arrow:hover { color: #f5c518; background: #0b0b0a; }
 .contact-bottom { display: flex; justify-content: space-between; gap: 28px; align-items: center; border-top: 1px solid #0b0b0a33; padding-top: 28px; }
+.email-group { display: inline-flex; align-items: center; gap: 14px; min-width: 0; }
 .email-link { font-size: clamp(15px, 2vw, 25px); letter-spacing: -.03em; overflow-wrap: anywhere; }
 .email-link:hover { text-decoration: underline; text-underline-offset: 6px; }
+.copy-email-btn { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; padding: 0; border: 1px solid #0b0b0a33; border-radius: 50%; background: transparent; color: #0b0b0a; flex-shrink: 0; transition: background .2s, color .2s, border-color .2s; }
+.copy-email-btn:hover { background: #0b0b0a; color: #f5c518; border-color: #0b0b0a; }
+.copy-email-btn svg { width: 16px; height: 16px; }
 .social-links { display: flex; gap: 24px; align-items: center; font-size: 14px; font-weight: 500; }
 .social-links a:hover { color: #0b0b0a; text-decoration: underline; }
-.social-links button { background: none; border: 0; padding: 8px 0; font-size: 14px; font-weight: 500; }
-.social-links button span { margin-left: 10px; }
 .copy-status { min-height: 30px; font: 11px/1.6 var(--mono); padding-top: 10px; }
 footer { display: flex; justify-content: space-between; gap: 20px; padding-block: 28px; border-top: 1px solid #0b0b0a33; margin-top: 40px; font-size: 12px; }
 .back-to-top { display: inline-flex; align-items: center; gap: 10px; text-underline-offset: 5px; }
